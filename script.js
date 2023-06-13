@@ -28,6 +28,32 @@ const subtotalElem = document.querySelector('#subtotal');
 const taxElem = document.querySelector('#tax');
 const ShippingElem = document.querySelector('#Shipping');
 const totalElem = document.querySelector('#total');
+const cityInput = document.getElementById('city');
+const form = document.getElementById("city-form");
+const weatherReport = document.getElementById("weather-report");
+const onClick = document.getElementById("demo");
+const bientoElem = document.getElementById("biento");
+
+
+onClick.addEventListener('click', ($event) => {
+     bientoElem.innerHTML = Date();
+     setTimeout(() =>{
+        bientoElem.innerHTML = ''
+     },5000)
+});
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); 
+
+  const cityInput = document.getElementById("city");
+  const city = cityInput.value;
+ 
+  weatherReport.innerHTML = `climate is clear in: ${city}`;
+  
+  setTimeout(()=>{
+    weatherReport.innerHTML = ''
+  }, 5000)
+});
+
 
 for ( let i = 0; i < incrementBtn.length; i++ ) {
     incrementBtn[i].addEventListener('click', function () {

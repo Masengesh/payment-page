@@ -107,9 +107,35 @@ input::-webkit-outer-spin-button{
 
 .checkout{
     width: 70%;
-    padding: 40px var(--px);
+    padding: 10px 40px 40px 40px;
     background: var(--white);
     border-right: 1px solid var(--gainsboro);
+    .check-weather{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        h2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .row{
+            .btn{
+                background-color: var(--azure);
+                color: white;
+                padding: 8px;
+                margin: 8px;
+            }
+        }
+    }
+    .pay{
+        display: flex;
+        justify-content: space-between;
+        #biento{
+            padding: 1rem;
+            
+        }
+    }
 }
 .section-heading{
     color: var(--onyx);
@@ -159,12 +185,14 @@ input::-webkit-outer-spin-button{
     padding-left: 10px;
     margin-bottom: 5px;
     font-size: var(--fs-14);
-    color: var(--spanish-gray);
+    color: var(--onyx);
 }
 .input-defoult{
     background: var(--platinum);
     border-radius: var(--radius);
     color: var(--davys-gray);
+    margin: 8px;
+    padding: 8px;
 }
 .payment-form{
     input{
