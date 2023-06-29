@@ -83,6 +83,12 @@ const totalCalc = function() {
     total = subtotal + totalTax;
     totalElem.textContent = total.total.toFixed(2);
     payAmountBtn.textContent = total.toFixed(2);
+
+    const getTotal = () => {
+        return cart.reduce((currentValue, nextValue) => {
+            return currentValue +nextValue.count * nextValue.price
+        } );
+    }
 }
 
 
